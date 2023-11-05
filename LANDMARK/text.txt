@@ -1,0 +1,12 @@
+
+deeppink #f23c9e clip
+royal blue #5a62e5 clip
+slate blue #5a67d8 logo
+black #1a202c
+text #c8c3bf silver
+slate gray
+
+height="100" width="50"
+				style="background-color: #840ada; padding: 1rem 2rem;"
+button color #626ee7
+green #48bb78

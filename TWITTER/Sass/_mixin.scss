@@ -1,0 +1,48 @@
+/*BREAKPOINT
+desktop 1300px
+tabland 1200px
+1095   1095px
+tabport 766px
+phone 600px
+
+
+*/
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == tabport{
+       @media only screen and(max-width:48em) {@content};
+   }
+
+   @if $breakpoint == 1095{
+  @media only screen and(max-width:68.4375em) {@content};
+  }
+
+  @if $breakpoint == 1004{
+    @media only screen and(max-width:62.75em) {@content};
+  }
+
+  @if $breakpoint == 955{
+    @media only screen and(max-width:59.6875em) {@content};
+  }
+
+   @if $breakpoint == tabland{
+       @media only screen and (max-width:75em) {@content};
+   }
+
+   @if $breakpoint == 675{
+    @media only screen and (max-width:42.1875em) {@content};
+}
+
+   @if $breakpoint == phone{
+       @media only screen and (max-width:37.5em) {@content};
+   }
+
+   @if $breakpoint == 500{
+    @media only screen and (max-width:31.25em) {@content};
+}
+
+   @if $breakpoint == desktop{
+       @media only screen and (min-width:81.25em) {@content};
+   }
+}

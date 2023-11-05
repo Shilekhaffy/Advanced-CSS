@@ -1,0 +1,278 @@
+:root{
+    /* Font Variables */
+--font-primary:'Nunito', sans-serif;
+--font-display:'Josefin Sans', sans-serif;
+
+/* color variable */
+--color-primary:#eee;
+--color-primary-light:#ffd60a;
+--color-primary-dark:#ffc300;
+--color-secondary:#003566;
+--color-tertiary:#001d3d;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.market{
+     margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+h1{
+    font-size: 4rem;
+    color: var(--color-primary-light);
+    margin-bottom: 1.5rem;  
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;   
+}
+
+
+.product{
+   display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1.2rem 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 2.5rem;    
+}
+
+.product h3{
+    font-size: 2rem;
+    color: var(--color-secondary);
+   
+}
+
+.market-table{
+    display: flex; 
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;  
+    margin-bottom: 1rem; 
+    height: 5rem;
+    align-items: center;
+}
+
+.market-table .price{  
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+ 
+} 
+
+.market-table p{
+    font-size: 1.5rem;
+    color:#777;
+}
+
+.market-table .red{
+    color: red;
+    
+}
+
+.coin{
+    display: flex;
+    align-items: center;
+}
+
+.coin span{
+    display: block;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.coin img{
+    width: 3rem;
+    margin-right: 1rem;
+    
+}
+
+
+ /* FOR THE BUTTONS */
+
+
+.btn-buy{
+    text-align: center;
+}
+.btn{
+    background:var(--color-tertiary);
+    color: var(--color-primary-light);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display:inline-block; 
+    margin: 5rem 0;
+    transition: all .2s;  
+}
+
+.btn:hover{
+    transform: translateY(-.5rem);
+}
+
+.btn2{
+    background:var(--color-tertiary);
+    color: var(--color-primary-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .2s; 
+}
+
+.btn2:hover{
+    background:var(--color-primary);
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+/* END */
+/* FOR THE GRID-COLUMN HIDDEN */
+.hide{
+    display: none;
+}
+
+.hide2{
+    display: none;
+}
+
+.hide3{
+    display: none;
+}
+
+/* END */
+
+
+/* BREAKPOINT FOR MEDIA QUERIES 
+37.25em //600px
+50em //800px
+75em //1200px
+
+*/
+
+/* MEDIA QUERIES */
+ @media only screen and (min-width:37.25em) {
+
+    .product{
+        display: grid;
+        grid-template-columns: repeat(3,1fr); 
+    }
+
+    .product .middle{
+         justify-self: center;
+    }
+
+    .product .heading-price{
+        justify-self: end;
+   }
+
+    .market-table{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .market-table .market-cap{
+        justify-self:center;
+    }
+
+    .hide{
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width:50em) {
+
+    .product{
+        display: grid;
+        grid-template-columns: repeat(4,1fr); 
+        justify-items: center;
+    }
+
+     .product .heading-price{
+        justify-self: center;
+   }
+
+   .product .heading-price span{
+     display: none;
+   }
+
+   .product .heading-product{
+     justify-self: start; 
+   }
+
+   .market-table{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+   }
+
+   .market-table .coin{
+     justify-self: start;
+   }
+
+   .market-table .price .red{
+    display: none;
+   }
+
+   .market-table .change p{
+    color: red;
+   }
+    
+   .hide2{
+    display: block;
+   }
+
+   .btn{
+    margin: 7rem 0;
+   }
+ } 
+
+ @media only screen and (min-width:62.5em) {
+
+    .market{
+        margin: 5rem 0;
+       padding: 0 4rem;
+   }
+    .product{
+        display: grid;
+        grid-template-columns: repeat(5,1fr); 
+        justify-items: center;
+    }
+    
+    .market-table{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        justify-items: center;
+       }
+
+       .btn-buy{
+        display: none;
+       }
+
+       .hide3{
+        display: block;
+       }
+ }
+
+

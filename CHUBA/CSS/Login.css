@@ -1,0 +1,159 @@
+:root{
+    /* Font Variables */
+--font-primary:'Nunito', sans-serif;
+--font-display:'Josefin Sans', sans-serif;
+
+/* color variable */
+--color-primary:#eee;
+--color-primary-light:#ffd60a;
+--color-primary-dark:#ffc300;
+--color-secondary:#003566;
+--color-tertiary:#001d3d;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.header{
+  background-color: var(--color-tertiary);
+  padding:1rem 3rem;
+}
+
+.header-link{
+   color: var(--color-primary-light);
+   font-size: 3rem;
+   text-decoration: none;
+   font-weight: bold;
+   
+}
+
+.login-page{
+    padding: 0 3rem;
+    margin: 6rem 0; 
+    
+}
+
+h2{
+    font-size:2rem;
+    color: var(--color-tertiary);
+    margin-bottom: 2rem;
+}
+
+.login-label{
+    font-size:2rem;
+    color: var(--color-secondary);
+    display: block; 
+    margin-bottom: .5rem;
+}
+
+
+.login-input{
+    border: none;
+    outline: none;
+    width: 100%; 
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    margin-bottom: 2rem; 
+    border: 1.7px solid #ccc;
+
+}
+
+.login-input:focus{
+   border: 1px solid var(--color-primary-light);
+} 
+
+a{
+    display:block;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.link-one{
+   text-align: center;
+   background-color: var(--color-tertiary);
+   color: var(--color-primary);
+   padding: 1rem 2rem;
+   border-radius: .5rem;
+   margin-bottom: 1rem;
+}
+
+.link-two{
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.link-three{
+    color: var(--color-primary-light);
+}
+
+.link-three span{
+    color: var(--color-secondary);
+}
+
+ /* MEDIA QUERIES */
+        
+ @media only screen and (min-width:31.25em) {
+      
+    .login-page{
+        padding: 0 5rem;
+        
+    }
+
+    .header{
+        padding:1rem 5rem;
+      }
+
+   }
+
+   @media only screen and (min-width:50em) {
+      
+    .login-page{
+        padding: 0 10rem;
+        
+    }
+
+    .header{
+        padding:1rem 10rem;
+      }
+
+
+   }
+
+   @media only screen and (min-width:62.5em) {
+      
+    .login-page{
+        padding: 0 15rem;
+        
+    }
+
+    .header{
+        padding:1rem 15rem;
+      }
+
+
+   }
+
+   @media only screen and (min-width:75em) {
+      
+    .login-page{
+        padding: 0 25rem;
+        
+    }
+
+    .header{
+        padding:1rem 25rem;
+      }
+
+
+   }

@@ -1,0 +1,99 @@
+@mixin respond($breakpoint){
+	@if $breakpoint == largest{
+	   @media only screen and(max-width:67.1875em) {@content};
+   }
+}
+
+.home{
+   // height: 90vh;
+    display: flex;
+    justify-content:space-between;
+    padding: 10.5rem 0;
+    border-bottom: 1px solid #ccc;
+
+
+    &__main-box{
+       //padding: 0 8rem;
+       margin-left: 8rem;
+
+       @include respond(largest){
+        margin-left:4rem;
+
+         
+      }
+    
+    }
+
+    
+  img{
+
+      @include respond(largest){
+         width:58rem;
+         
+      }
+     }
+    
+
+    &__heading{
+       font-size: 6rem;
+       font-weight: 700;
+       color: #1a202c;
+       margin-top:8rem;
+
+       @include respond(largest){
+         margin-top: 0;
+          
+       }
+    }
+
+    &__text{
+         font-size: 1.9rem;
+         color:var(--color-text);
+         margin-top: 1rem;
+         margin-bottom: 3.5rem;
+    }
+
+     &__link{
+        font-size: 1.5rem;
+        font-weight:  bold;
+        color: #fff;
+        background-color: #5a67d8;
+        text-decoration: none;
+        padding: 1.5rem 3.2rem;
+        border-radius: .5rem;
+     }
+        
+   &__text2{
+       margin-top: 10rem;
+       text-transform: uppercase;
+       font-size: 1.5rem;
+       color:#a0aec0;
+       margin-bottom: 1.5rem;
+       
+   }
+    
+   &__icon{
+   
+    display: flex;
+    align-items: center;
+
+    
+    i{
+    font-size: 4rem;
+    color:#a0aec0 ;
+    &:not(:last-child){
+        margin-right: 2rem;
+    }
+
+    &:hover{
+        color: #777;
+    }
+   }
+
+
+   .stripe{
+    font-size: 6rem;
+   }
+      
+  } 
+}

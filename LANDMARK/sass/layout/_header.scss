@@ -1,0 +1,132 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    padding: 2rem 10rem;
+    background: transparent;
+
+    @include respond(largest){
+        padding: 2rem 4rem;
+    }
+
+    &__logo{
+        display: flex;
+        align-items: center;
+    }
+        
+    &__logo-p{
+        color: #2d3748;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-left: 1rem;
+        margin-top: .5rem;
+    }
+
+   span{
+        background-color: #f23c9e;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        margin-top: 1.4rem;
+    }
+
+    &__nav{
+       
+    }
+
+    &__list{
+        display: flex;
+        list-style: none;
+        margin-top: 1.7rem;
+
+        @include respond(largest){
+            margin-left: 3rem;
+         }
+        
+    }
+    
+    &__item{
+       &:not(:last-child){
+         margin-right: 2.5rem;
+    }
+    }
+
+    &__link{
+       &:link,&:visited{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2d3748;
+        text-decoration: none;
+       }
+
+       &:hover{
+        color:#626ee7 ;
+       }
+    }
+     
+    &__button{
+        display: flex;
+        align-items: center;
+    }
+
+   
+
+    &__btn2{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        color:#626ee7;
+        background-color: #fff;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        text-align: center;
+
+        &:hover{
+            box-shadow: 0 2rem 4rem rgba( #000, .1);
+        }
+   
+    }
+
+    &__btn1{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        color:#fff;
+        margin-right: 7rem;
+
+        @include respond(largest){
+         margin-right: 5rem;
+        }  
+    }
+
+}
+
+.fixed-figure{
+    background-color:#616de7;
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+     position:absolute;
+     top: 0 ;
+     right: 0;
+     width: 35rem;
+     height: 20rem;  
+     z-index: -1;
+
+     @include respond(largest){
+       width: 25rem;
+    }
+}
+
+.fixed-figure-two{
+    background-color:#f23c9e;
+    clip-path: polygon(56% 0, 70% 0%, 96% 0, 100% 70%, 100% 87%, 54% 66%, 40% 44%, 42% 15%);
+    border-radius:10rem;
+     position:absolute;
+     top: 0 ;
+     right: 15rem;
+     width: 35rem;
+     height: 20rem;  
+     z-index: -2;
+
+     @include respond(largest){
+        width: 20rem;
+     }
+}

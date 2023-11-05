@@ -1,0 +1,179 @@
+@mixin respond($breakpoint){
+	@if $breakpoint == largest{
+	   @media only screen and(max-width:67.1875em) {@content};
+   }
+}
+
+.pricing{
+    padding: 15rem 10rem;
+    border-bottom: 1px solid #ccc;
+
+    @include respond(largest){
+      padding:12rem 10rem;
+    }
+
+    &__header{
+       text-align: center;
+    }
+
+    &__text{
+      color: #667eea;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    
+    &__heading{
+       font-size:7rem;
+       font-weight:600;
+       color: #1a202c;
+
+       
+    @include respond(largest){
+       font-size: 6rem;
+      }
+
+        span{
+            display: block;
+        }
+    }
+
+    &__main-box{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+    }
+
+    &__single-box{
+        background-color:#fff;
+        padding: 3rem;
+        width: 34rem; 
+        border-radius: .5rem; 
+        max-height: 50rem;
+        
+       
+    }
+
+    &__single-a{
+        // border:1px solid #ccc;
+        margin-right:-.5rem;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+       
+    }
+
+    &__single-b{
+        width: 36rem; 
+        height: 51rem;
+        max-height: 51rem;
+        align-self: center;
+        padding: 0;
+        z-index: 9;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+
+    &__single-c{
+        box-shadow: 0 2rem 4rem rgba(#000,.1);
+        margin-left:-.5rem;
+    }
+
+    &__mini-box{
+        padding: 0 3rem;
+    }
+
+    &__plan{
+       color: #000;
+       font-size: 2rem;
+      text-transform: uppercase;
+       margin-bottom: 1.5rem;
+       text-align: center;
+
+       span{
+        font-weight:600;
+       }
+    }
+
+    &__h3{
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+
+        span{
+            font-size: 2rem;
+            margin-right:.3rem;
+            
+        }
+    }
+
+    &__h3-2{
+        font-size: 4.5rem;
+    }
+
+    &__paragraph{
+        color: #718096;
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+    }
+     
+    &__list{
+        margin-bottom: 5rem;
+    }
+
+    &__item{
+      list-style: none;
+      font-size: 1.5rem;
+      color: #725568;
+
+      &:not(:last-child){
+        margin-bottom: 1.3rem;
+    }
+
+      i{
+        margin-right:1.5rem;
+        color:#48bb78 ;
+        font-size: 2.2rem;
+
+       
+      }
+    }
+
+    &__button{
+       color: #fff;
+       background-color: #000;
+       text-transform: uppercase;
+       font-size: 1.5rem;
+       font-weight: 600;
+       padding: 2rem 4rem;
+       border-radius: .5rem;
+       display: block;
+       margin: 0 auto;
+       border: none;
+
+       &:hover{
+        background-color: #48bb78;
+       }
+    }
+
+    .blue{
+        &:hover{
+            background-color: #667eea;
+        }
+    }
+
+    &__custom{
+        list-style: none;
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #667eea;
+        padding: 1rem 0;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        margin-bottom: 3rem;
+    }
+
+}

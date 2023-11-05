@@ -1,0 +1,184 @@
+.header{
+    background-color:#dad7cd;
+    display: flex;
+    justify-content: space-between;
+    padding:1rem 12rem;
+    align-items: center;
+    position: relative;
+
+    position: fixed;
+    top:0;
+    z-index: 9999;
+    width: 100%;
+   
+
+    @media only screen and (max-width:$bp-575){
+       padding: 2rem 2rem;
+       }
+
+
+    &__nav{
+        margin-right: 2rem; 
+       
+    
+        
+     @media only screen and (max-width:$bp-medium){
+            display: none;
+           }
+        }
+
+  &__list{
+       list-style: none;
+       display: flex;
+       
+  }
+   
+  &__item{ 
+
+    &:not(:last-child){
+    margin-right: 2rem;
+   }  
+
+   & > *{
+    text-decoration: none;
+    color:#03045e;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    transition: all .5s ;
+
+   }
+
+   & > *:hover{
+    color: var(--color-yellow);
+   }
+
+   
+
+  }
+
+  &__icon{
+    margin-left:5rem;
+    margin-top: .3rem;
+  }
+
+  &__link-active{
+     color: var(--color-yellow);
+     }
+
+ //// for the icon in 62.5em breakpoint
+
+   &__checkbox{
+    display: none;
+   }
+
+   &__button{
+     display: none;
+   }
+
+   &__icon2{
+    position: relative;
+    
+   
+
+    &,&::before,&::after{
+        width: 2.5rem;
+        height: 2px;
+        background-color: var(--color-yellow);
+        display: inline-block;
+    }
+
+    &::before,&::after{
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    &::before{
+        top: -.8rem;
+    }   
+   
+    &::after{
+        top: .8rem;
+    }
+   }
+
+&__dropdown-box{
+  background-color: var(--color-grey-dark-3);
+  padding:0 11rem;
+  list-style: none;
+  z-index: 10;
+  position: fixed;
+  top:63px;
+  left: 0;
+  width: 100%;
+  display: none;
+
+
+  @media only screen and (max-width:$bp-575){
+    padding: 0 2rem;
+    }
+
+
+}
+
+&__dropdown-item{
+
+  &:not(:last-child){
+  margin-bottom: 2rem; 
+  }
+
+ & > *{
+  text-decoration: none;
+  color:#fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  transition: all .5s ;
+  margin-bottom: 2rem; 
+ display: block;
+ }
+
+ & > *:hover{
+  color: var(--color-yellow);
+ }
+
+}
+
+&__dropdown-link{
+  border-bottom: 1px solid var(--color-grey-dark-2);
+}
+
+
+
+
+   @media only screen and (max-width:$bp-medium){
+
+    background-color: var(--color-grey-dark-3);
+    
+    &__button{
+        display: block;
+       
+      }
+
+      &__dropdown-box{
+
+      }
+      
+      &__checkbox:checked ~ &__dropdown-box{
+        //transform: translateY(10);
+        transition: all 5s ease-in;
+        display: block;
+      }
+
+      &__checkbox:checked + &__button &__icon2 {background-color: transparent;}
+      &__checkbox:checked + &__button &__icon2::before{
+        top: 0;
+        transform: rotate(135deg);
+      }
+      &__checkbox:checked + &__button &__icon2::after{
+        top: 0;
+        transform: rotate(-135deg);
+      }
+   }
+}

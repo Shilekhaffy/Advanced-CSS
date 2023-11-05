@@ -1,0 +1,59 @@
+:root{
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+
+html{
+    font-size: 93.75%;
+
+    @include respond(675){
+        font-size: 72%;
+     
+      }
+
+      @include respond(phone){
+        font-size: 65%;
+     
+      }
+
+      @include respond(500){
+        font-size: 75%;
+     
+      }
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #fff;
+   
+   
+
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    
+    height: 100vh;
+    min-height: 100vh;
+
+    @include respond(500){
+        border-bottom: 1px solid #ccc;
+       }
+    
+}

@@ -1,0 +1,209 @@
+.navigation{
+    flex: 0 0 20%;
+    padding: .3rem 0 .3rem 3rem;
+
+    @include respond(tabland){
+       flex: 0 0 6%;
+        padding: .2rem 0;
+     }
+
+     @include respond(500){
+        display: none;
+      }
+      
+
+
+    &__nav{
+     padding: 0 .5rem;
+
+     @include respond(tabland){
+        padding: 0;
+
+     }
+
+     @include respond(1095){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+ 
+       
+    }
+
+    &__flex{
+        display: flex;
+        align-items: center;
+
+
+        i{
+            font-size: 1.5rem;
+            color: #0f1419;
+
+            @include respond(675){
+                font-size: 2rem;
+             
+              }
+            
+        }
+
+        &--inline{
+            display: flex;
+            align-items: center;
+            padding: .6rem 1.6rem .6rem 1rem;
+
+            @include respond(tabland){
+               margin-bottom: .5rem;
+             }
+
+             @include respond(tabport){
+                margin-bottom: 1.2rem;
+               
+                }
+        }
+
+        &--inline:hover{
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 10rem;
+            display: inline-flex;
+            
+        }
+    }
+
+    .hidden{
+       background-color: #1d9bf0;
+        padding: 1rem;
+       border-radius: 50%;
+       display: none;
+        
+       @include respond(tabland){
+        display: block;
+     }
+       
+    }
+
+    .hide{
+        @include respond(tabland){
+           display: none;
+        
+           
+         }
+    }
+
+    &__link{
+        font-size: 1.3rem;
+        color: #0f1419;
+        text-decoration: none;
+        margin-left: 1.6rem;
+
+        @include respond(tabland){
+           display: none;
+        }
+        
+    }
+
+   .home{
+        color: #0f1419;
+        font-weight: 600;
+        
+    }
+
+    .four{
+      margin-left: 1.2rem;
+    }
+
+.blue{
+    font-size: 1.8rem;
+    color:#1d9bf0 ;
+    padding: .8rem;
+    margin-bottom:.5rem ;
+    
+    &:hover{
+         background-color: #B4E0DE ;
+         border-radius: 50%;
+    }
+}
+
+.dot{
+    position: relative;
+
+    span{
+        width: .5rem;
+        height: .5rem;
+        background-color: #1d9bf0;
+        border-radius: 50%;
+        position: absolute;
+        top: -30%;
+        left: 60%;
+    }
+}
+
+
+&__btn{
+    color: #fff;
+    background-color:#1d9bf0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 6rem;
+    border: none;
+    border-radius: 10rem;
+    margin-left: -1rem;
+    margin: 1rem 0;
+
+    &:hover{
+        background-color: #2569f1;
+    }
+
+    @include respond(tabland){
+        display: none;
+     }
+  
+}
+
+  &__single-box{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+
+   i{
+    margin-left: 2.5rem;
+
+    @include respond(tabland){
+        display: none;
+     }
+ }
+
+    &:hover{
+        background-color: #eee;
+        border-radius: 10rem;
+   }
+  
+   
+ }
+
+
+  img{
+         width: 20%;
+        border-radius: 50%;
+
+        @include respond(tabland){
+            width: 3rem;
+            margin-left: 1rem;
+         }
+    }
+
+    
+
+  &__text{
+      margin-left:.5rem ;
+
+      @include respond(tabland){
+        display: none;
+     }
+       }
+    
+}
+
+        

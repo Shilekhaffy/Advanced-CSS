@@ -1,0 +1,149 @@
+:root{
+    /* Font Variables */
+--font-primary:'Nunito', sans-serif;
+--font-display:'Josefin Sans', sans-serif;
+
+/* color variable */
+--color-primary:#eee;
+--color-primary-light:#ffd60a;
+--color-primary-dark:#ffc300;
+--color-secondary:#003566;
+--color-tertiary:#001d3d;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+h1{
+    color: var(--color-secondary);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.wallet{
+    margin: 5rem 0;
+    padding: 0 2rem;
+}
+
+.wallet img{
+    width: 3rem;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    background-color: var(--color-tertiary);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    align-items: center;
+}
+
+.product span{
+    display: block;
+    font-size: 1.5rem;
+}
+
+.product h3{
+    font-size: 2rem;
+    color: var(--color-primary-light);
+}
+
+.wallet-box{
+   
+}
+.wallet-table{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem; 
+    height: 5rem;
+    border: 1px solid #eee;
+    padding: .5rem 1rem;
+    
+}
+
+ .wallet-table p{
+    font-size: 1.5rem;
+    color:#777;
+}
+
+.wallet-table .red{
+    color: red;
+
+}
+
+.coin{
+    display: flex;
+    align-items: center;
+}
+
+.coin span{
+    display: block;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.coin img{
+    width: 3rem;
+    margin-right: 1rem;
+    
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} 
+
+/* BREAKPOINTS
+
+37.25em //600px
+50em //800px 
+62.5em //1000px
+75em //1200px
+*/
+
+@media only screen and (min-width:37.25em) {
+    h1{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width:50em) {
+    .wallet{
+        padding: 0 10rem;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (min-width:62.5em) {
+    .wallet{
+        padding: 0 15rem;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (min-width:75em) {
+    .wallet{
+        padding: 0 20rem;
+        margin: 5rem auto;
+    }
+}

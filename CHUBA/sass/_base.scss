@@ -1,0 +1,44 @@
+//Font Variables
+$font-primary:'Nunito', sans-serif;
+$font-display:'Josefin Sans', sans-serif;
+
+//color variable
+$color-primary:#eee;
+$color-primary-light:#ffd60a;
+$color-primary-dark:#ffc300;
+$color-secondary:#003566;
+$color-tertiary:#001d3d;
+
+
+//media breakpoints
+$bp-small:37.5em; //600px
+$bp-medium:50em; //800px
+$bp-mid:62.5em; //1000px
+$bp-desk:75em; //1200px
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $font-primary;
+   // color:$color-primary;
+    font-weight:300 ;
+    line-height:1.6;
+    overflow-x: hidden;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit[col-start],minmax(min-content,1fr)[col-end]);
+  grid-template-rows:6rem ;
+}

@@ -1,0 +1,275 @@
+.main{
+    flex:0 0 44%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+    @include respond(500){
+     width: 40rem;
+       }
+    
+
+
+ &__first-part{
+    padding: 1rem 1.5rem;  
+    border-bottom: 1px solid #ccc;
+    //width: 35rem;
+    &:hover{
+        background-color: #eee;
+    }
+
+    @include respond(tabport){
+        padding: 1rem 3rem;
+      }
+
+      @include respond(phone){
+        padding: 0 2rem;
+       
+        }
+
+        @include respond(500){
+           padding: 1rem 2rem;
+          }
+ }
+
+
+ &__first-part-box1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    @include respond(phone){
+        padding:0 2rem ;
+        margin-top: .5rem;
+         }
+    
+   
+}
+
+  &__link{
+        color: #0f1419;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-decoration: none;
+}
+
+  &__first-part-box2{
+    display:flex ;
+    margin-bottom: 2rem;
+
+    img{
+        width: 10%;
+       border-radius: 50%;
+   }
+
+   @include respond(500){
+    display: none;
+  }
+}
+
+  &__input{
+    border: none;
+    margin-left: .5rem;
+    width: 100%;
+    background-color: transparent;
+ 
+     &::-webkit-input-placeholder{
+            font-size: 1.2rem;
+            color:#777; 
+     }
+
+    &:focus{
+        outline: none;
+    }
+
+  }
+
+  
+   &__first-part-box3{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+
+    i{
+        font-size: 1.3rem;
+        color: #1d9bf0;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+     
+    @include respond(phone){
+        padding:0 2rem ;
+         }
+
+         @include respond(500){
+            display: none;
+          }
+    
+   }
+
+   &__btn{
+    color: #fff;
+    background-color: #8ecdf8;
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+
+    @include respond(phone){
+       padding:1rem 2rem ;
+       border-radius: 10rem;
+       
+        }
+   }
+
+
+   &__p{
+    font-size: 1rem;
+    color: #8ecdf8;
+    margin-bottom: .5rem;
+   }
+
+   &__second-part{
+    padding:.5rem 1.5rem;
+
+    &:not(:last-child){
+        border-bottom: 1px solid #ccc;
+    }
+
+    &:hover{
+        background-color: #eee;
+    }
+   }
+
+   &__second-part-box1{
+    display: flex;
+    color: #777;
+    align-items: center;
+    margin-left: 3rem;
+
+    i{
+     margin-right: .6rem;
+    }
+   }
+
+   &__h6{
+    font-size: .9rem;
+
+    &:hover{
+        text-decoration: underline;
+    }
+
+    
+   }
+
+   &__second-part-box2{
+    display: flex;
+    margin-bottom: .5rem;
+    width: 35rem;
+
+    img{
+        width: 10%;
+        border-radius: 50%;
+    }
+
+    i{
+        margin-left: auto;
+
+        @include respond(phone){
+           margin-right: 2rem;
+              }
+    }
+
+    &:hover{
+        background-color: #eee;
+    }
+
+   }
+
+   &__name{
+    margin-left: .7rem;
+    color: #777;
+    font-size: 1rem;
+
+    span{
+        color: #0f1419;
+        font-size: 1.1rem;
+        display: block;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+   }
+
+   &__second-part-box3{
+    color: #9fa1a3;
+
+    @include respond(tabport){
+     //padding: 0 3.5rem;
+     font-size: 1rem;
+       }
+  
+   }
+
+ &__paragraph{
+    font-size: 1.1rem;
+    margin-bottom: .7rem;
+
+    @include respond(500){
+       // flex-wrap: wrap;
+        width: 32rem;
+                   
+         }
+   }
+
+   &__icon{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .4rem;
+
+    @include respond(500){
+        margin-right: 7rem;
+           
+ }
+}
+
+   &__list{
+        list-style: none;
+
+        i{
+            font-size: 1.1rem;
+            margin-right: .4rem;
+            padding: .6rem;
+
+            @include respond(500){
+               margin-right: 0; 
+           }
+    
+        }
+    }
+
+   .blue{
+
+    &:hover{
+        color: #1d9bf0;
+    }
+   }
+
+  .green{
+
+    &:hover{
+        color: #1df0aa;
+    }
+   }
+
+   .pink{
+
+    &:hover{
+        color: #f01db1;
+    }
+   }
+
+}

@@ -1,0 +1,109 @@
+
+@mixin respond($breakpoint){
+	@if $breakpoint == largest{
+	   @media only screen and(max-width:67.1875em) {@content};
+   }
+
+}
+.feature{
+    padding: 15rem 10rem;
+    border-bottom: 1px solid #ccc;
+
+    @include respond(largest){
+       padding: 8rem 0;
+    }
+
+    &__header{
+        text-align: center;
+    }
+    &__text{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #5a67d8 ;
+        margin-top: 2rem;
+    }
+
+    &__heading{
+        font-size: 7rem;
+        font-weight: 600;
+        color: #1a202c;
+
+        @include respond(largest){
+          font-size: 6rem;
+         }
+
+        span{
+            display: block;
+        }
+    }
+
+    &__main-box{
+        display: flex;
+        justify-content:center;
+        margin-top: 10rem;
+    }
+
+    &__single-box{
+        background-color: #f7fafc;
+        padding: 3rem 4rem;
+        
+
+        &:not(:last-child){
+            margin-right: 4rem;
+
+            @include respond(largest){
+               margin-right: 0;
+             }
+        }
+    }
+
+
+    &__svg{
+        height: 3rem;
+        fill:#000; 
+        margin-top: 3rem; 
+        margin-bottom: 4rem; 
+    
+    }
+
+    &__h3{
+       color: #000;
+       font-size: 1.8rem;
+       text-align: center;
+       margin-bottom: 1rem;
+    }
+
+    &__paragraph{
+      color: #777;
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+     
+    }
+
+    &__link{
+      color: #6691ef;
+      font-size: 1.4rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    &__sb-bck1{
+        clip-path: polygon(48% 11%, 95% 0, 100% 35%, 100% 70%, 82% 85%, 30% 90%, 25% 89%, 15% 69%, 0% 35%, 7% 0);
+        border-radius: 10rem;
+       
+    }
+
+    &__sb-bck2{
+        clip-path: polygon(52% 5%, 95% 5%, 89% 38%, 88% 75%, 80% 96%, 14% 98%, 9% 94%, 11% 74%, 12% 4%, 19% 1%);
+        border-radius: 10rem;
+       
+    }
+
+    &__sb-bck3{
+        clip-path: polygon(52% 7%, 91% 0, 100% 43%, 97% 92%, 70% 89%, 32% 100%, 14% 73%, 0% 43%, 12% 23%);
+        border-radius: 10rem;
+    }
+}

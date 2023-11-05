@@ -1,0 +1,135 @@
+$bp-largest:75em; ///1200px
+$bp-large:62.5em; ///1000px
+$bp-medium:61.875em; ///990px
+$bp-mid:54.375em; //870px
+$bp-small:53.625em; ///858px
+$bp-smallest:47.875em; ///766px
+$bp-575:39.9375em; ///575px
+$bp-495:30.9375em; ///495px
+$bp-382:23.875em; ///382px
+
+.feature{
+    padding: 10rem 0;
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 4rem 4rem;
+    }
+   
+    @media only screen and (max-width:$bp-mid){
+        padding: 2rem 0;
+    }
+
+
+    &__header{
+        text-align: center;
+    }
+
+    &__h2{
+        color: var(--color-blue);
+        font-size: 4.5rem;
+        font-weight: 600;
+
+        @media only screen and (max-width:$bp-mid){
+           font-size: 3rem;
+        }
+       
+    }
+
+    &__text-h{
+        color: var(--color-grey-dark-3);
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    &__main-box{
+        display: flex;
+        flex-wrap:wrap ;
+        justify-content:center;
+        align-items: center;
+        margin-top: 10rem;
+      
+
+        @media only screen and (max-width:$bp-medium){
+         margin-top: 4rem;
+         justify-content: space-between;
+         padding: 4rem 1rem;
+         margin-left:6rem ;
+        }
+
+        @media only screen and (max-width:$bp-mid){
+           margin-top: .5rem;
+        }
+        
+        @media only screen and (max-width:$bp-575){
+            margin-left: 2rem;
+           }
+
+        @media only screen and (max-width:$bp-495){
+           padding: 4rem 0;
+           }
+        
+    }
+        
+    
+
+    &__single-box{
+      background-color:var(--color-grey-light-3);
+      padding: 2.5rem 4rem; 
+      margin-right: 2.5rem;
+      width:35rem;
+
+      &:hover{
+        transform: scale(1.02);
+        box-shadow: 0 2rem 4rem rgba(#000,.1);
+
+     }
+     
+
+      @media only screen and (max-width:$bp-largest){
+       width: 28rem;
+    }
+
+    @media only screen and (max-width:$bp-medium){
+        width:33rem;
+        padding: 3rem 3rem;
+
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+
+        @media only screen and (max-width:$bp-mid){
+           width: 30rem;
+        }
+
+        @media only screen and (max-width:$bp-smallest){
+           width: 50rem;
+           //margin-left: 6rem;
+           padding: 3rem 5rem;
+        }
+
+        @media only screen and (max-width:$bp-575){
+            width: 52rem;
+           }
+    }
+      
+    }
+
+    &__icon{
+        color:var(--color-blue) ;
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+     }
+ 
+     &__h3{
+         color:var(--color-blue);
+         font-size: 2rem;
+         font-weight: 400;
+         margin-bottom: 1.5rem;
+     }
+ 
+     &__text{
+        color: var(--color-grey-dark-2);
+        font-size:1.5rem ;
+     }
+ }
+ 

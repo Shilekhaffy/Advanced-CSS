@@ -1,0 +1,130 @@
+$bp-382:23.875em; ///382px
+.course{
+    margin-bottom: 13rem;
+ 
+     &__heading{
+       text-align: center;
+     }
+ 
+     &__header{
+         color: var(--color-blue);
+         font-size: 4.5rem;
+         font-weight: 600;
+
+         @media only screen and (max-width:$bp-382){
+         font-size: 3rem;
+ }
+    
+     }
+ 
+     &__header-text{
+         color: var(--color-grey-dark-3);
+         font-size: 1.5rem;
+         font-style: italic;
+     
+     }
+ 
+   &__main-box{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+ 
+     margin-top: 7rem;
+    
+   }
+ 
+   &__single-box{
+     background-color: var(--color-grey-light-3);
+       margin-right: 3.5rem;
+       width:32rem;
+       position: relative;
+       overflow: hidden !important; 
+       
+       &:hover{
+        background-color: #fff;
+       }
+     }
+     
+ 
+      &__single-box:hover &__photo{
+             transform: scale(1.05);
+         }
+         
+         &__single-box:hover &__h3{
+             color: var(--color-yellow);
+         }
+  
+         &__single-box:hover span{
+             color: var(--color-yellow);
+             background-color: var(--color-blue);
+         }
+ 
+    &__padding{
+         padding:2.5rem 2.5rem ;
+ 
+  }
+ 
+   &__photo  {
+     width: 32rem;
+     height: auto;
+     transition: transform .2s ease
+   }
+   
+   &__design{
+       color: #fff;
+       font-size: 1.2rem;
+       background-color: var(--color-blue);
+       display: inline-block;
+       text-transform: uppercase;
+       padding: .5rem 2rem;
+       margin-bottom: 2rem;
+   }
+ 
+   &__h3{
+        color: var(--color-blue);
+        font-size: 2rem;
+        margin-bottom: 2rem;
+   }
+ 
+   &__text{
+ 
+     color: var(--color-grey-dark-3);
+     font-size:1.6rem ;
+     margin-bottom: 2rem;
+  }
+ 
+   &__review{
+     display: flex;
+     align-items: center;
+   }
+ 
+   &__review-name{
+       font-size: 1.5rem;
+       font-weight: 600;
+       color: var(--color-blue);
+       margin-left: 1.5rem;
+   }
+ 
+   &__review-icon{
+      margin-left: auto;
+      font-size: 1.5rem;
+      color: var(--color-blue);
+   }
+ 
+   
+   &__amount{
+     font-size: 2rem;
+     font-weight: 200;
+     color: var(--color-blue);
+     background-color: var(--color-yellow);
+     padding: 2rem;
+     border-radius: 50%;
+     position: absolute;
+     top: 40%;
+     left: 72%;
+ 
+   }
+ 
+ }
+ 

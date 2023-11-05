@@ -1,0 +1,137 @@
+$bp-largest:75em; ///1200px
+$bp-large:62.5em; ///1000px
+$bp-medium:61.875em; ///990px
+$bp-smallest:47.875em; ///766px
+$bp-634:39.625em; ////634px
+$bp-575:35.9375em; ///575px
+$bp-495:30.9375em; ///495px
+$bp-410:26.625em; ///410px
+$bp-382:23.875em; ///382px
+
+
+
+.home{
+     height: 100vh;
+     background-image:url(../images/college-student.png);
+     background-color:#dad7cd;
+     background-size:cover;
+     background-position: center;
+     position: relative;
+
+    &__content{
+        position: absolute;
+        top: 38%;
+        left: 23%;
+        text-align: center;
+
+        @media only screen and (max-width:$bp-large) {
+            left: 10%;
+            }
+    
+       @media only screen and (max-width:$bp-medium){
+             top: 37%;  
+             left:10%;
+             padding: 0 10rem; 
+            }
+
+      @media only screen and (max-width:$bp-mid){
+         } 
+           
+      @media only screen and (max-width:$bp-smallest){
+          left: 0;
+          padding: 0 6rem;
+     }
+
+     @media only screen and (max-width:$bp-634){
+         padding: 0 3rem;
+   }
+     
+   @media only screen and (max-width:$bp-575){
+      padding: 0 1rem;
+       top: 28%;
+   }
+    }
+
+    
+    &__heading{
+        color: var(--color-blue);
+        font-size: 5rem;
+         font-weight: 600;
+        margin-bottom: 4rem;
+        margin-top: 1.2rem;
+        text-transform: uppercase;
+
+        @media only screen and (max-width:$bp-575){
+            font-size: 4rem;
+           }
+
+    }
+
+    &__p{
+        color: var(--color-blue);
+        font-size: 2rem;
+        font-weight: 200;
+        text-transform: uppercase;
+
+        @media only screen and (max-width:$bp-575){
+            font-weight: 600;
+           }
+    }
+
+    &__box{
+
+        @media only screen and (max-width:$bp-382){
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+        
+            } 
+    }
+
+    &__link{
+       font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 4.5rem;
+        border-radius: .5rem;
+
+
+    }
+
+    .btn-blue{
+        color: var(--color-yellow);
+        background-color: var(--color-blue);
+        margin-right: 1.5rem;
+
+        &:hover{
+            background-color: #dad7cd;
+            color: var(--color-blue);
+            border: 1px solid var(--color-blue);
+
+        }
+
+        @media only screen and (max-width:$bp-575){
+           margin-right: .5rem;
+           }
+
+           @media only screen and (max-width:$bp-382){
+            margin-bottom: 1.5rem;
+            }
+    }
+
+    .btn-yellow{
+        color: var(--color-blue);
+        background-color: var(--color-yellow);
+
+        &:hover{
+            color: var(--color-yellow);
+        background-color: var(--color-blue);
+        }
+    }
+}
+
+   
+
+
+
+

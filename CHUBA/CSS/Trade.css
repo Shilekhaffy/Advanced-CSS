@@ -1,0 +1,191 @@
+:root{
+    /* Font Variables */
+--font-primary:'Nunito', sans-serif;
+--font-display:'Josefin Sans', sans-serif;
+
+/* color variable */
+--color-primary:#eee;
+--color-primary-light:#ffd60a;
+--color-primary-dark:#ffc300;
+--color-secondary:#003566;
+--color-tertiary:#001d3d;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    padding: 1.8rem;
+}
+
+.container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+    padding: 5rem 0;
+   
+}
+
+.trade-image{
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+}
+
+.trade-image img{
+   width: 100%; 
+   border-radius: 1rem;
+}
+
+h2{
+    color: var(--color-primary-light);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.trade{
+    margin: 4rem 0;
+    padding: 0 1rem;
+}
+
+.check,
+.check-two{
+    display: none;
+}
+.buy-check,
+.sell-check{
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    background-color:var(--color-secondary) ;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+}
+
+h1{
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+ 
+    display: inline-block;
+    background-color:var(--color-secondary) ;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+}
+
+h3{
+    color: var(--color-tertiary);
+    font-size: 2rem; 
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    margin-top: 3rem;
+}
+
+.input{
+    width: 90%;
+    border-radius: .5rem;
+    border: 1px solid var(--color-primary-dark);
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-input::placeholder{
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+   
+}
+
+.buy-input,
+.sell-input{
+     border: none; 
+    outline: none; 
+    background: transparent;
+     padding: 1.5rem 3rem;
+    border-color: var(--color-primary-dark);
+   
+}
+
+#select{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-secondary);
+}
+
+.display-sell{
+    display: none;
+}
+
+.check-two:checked ~ .display-sell{
+     display: block !important;
+}
+
+.check-two:checked ~ .display-buy{
+     display: none !important;
+} 
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width:31.25em) {
+     
+    body{
+        padding: 1.8rem 7rem;
+    }
+
+    .buy-input,
+    .sell-input{
+    padding: 1.5rem 1rem;
+   }
+
+   .buy-check,
+   .sell-check{
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width:50em) {
+     
+    body{
+        padding: 1.8rem 10rem;
+    }
+
+    .buy-check,
+   .sell-check{
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (min-width:62.5em) {
+     
+    body{
+        padding: 5rem 15rem;
+    }
+
+}
+
+@media only screen and (min-width:75em) {
+     
+    body{
+        padding: 5rem 25rem;
+    }
+
+}

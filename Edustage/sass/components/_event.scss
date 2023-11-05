@@ -1,0 +1,215 @@
+$bp-largest:75em; ///1200px
+$bp-large:62.5em; ///1000px
+$bp-medium:61.875em; ///990px
+$bp-small:53.625em; ///858px
+$bp-smallest:47.875em; ///766px
+$bp-575:35.9375em; ////575px
+$bp-495:30.9375em; ///495px
+$bp-450:28.125em; ///450px
+$bp-382:23.875em; ///382px
+
+.event{
+    padding: 12rem 0 8rem 0;
+    background-color: var(--color-blue);
+
+    @media only screen and (max-width:$bp-largest) {
+        padding: 12rem 12rem 8rem 12rem  ;
+    }
+
+    @media only screen and (max-width:$bp-large) {
+        padding: 12rem 2rem 8rem 2rem  ;
+    }
+
+    @media only screen and (max-width:$bp-medium) {
+        padding: 4rem 10rem;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        padding: 4rem 0;
+     }
+
+     @media only screen and (max-width:$bp-smallest){
+      padding: 4rem 5rem;
+   }
+     
+   @media only screen and (max-width:$bp-575){
+           padding: 4rem 2rem;
+  }
+
+
+    &__heading{
+        font-size: 3.2rem;
+        color: #fff;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    &__h4{
+        color: var(--color-grey-dark-3);
+        font-size: 1.5rem;
+        font-style: italic;
+        text-align: center; 
+        margin-bottom: 8rem;
+
+        @media only screen and (max-width:$bp-medium) {
+           margin-bottom: 4rem;
+        }
+    }
+
+    &__main-box{
+        display: flex;
+        justify-content:center ;
+
+        @media only screen and (max-width:$bp-medium) {
+            margin-left: 6rem;
+          }
+
+          @media only screen and (max-width:$bp-small){
+           margin-left:4rem ;
+         }
+
+         @media only screen and (max-width:$bp-smallest) {
+             flex-direction: column;
+             margin-left:2rem ;   
+        }
+
+        @media only screen and (max-width:$bp-495){
+          margin-left: 0;
+      }
+
+ }
+
+    &__single-box{
+        position: relative;
+        overflow: hidden;
+        transform: transform 1s cubic-bezier(.54,.04,.36,.9);
+
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
+      
+        @media only screen and (max-width:$bp-smallest){
+         width: 50rem ;
+         
+         &:not(:last-child){
+          margin-bottom:3rem;
+      }
+       }
+
+       @media only screen and (max-width:$bp-575){
+        margin-right: 0;
+      }
+
+      @media only screen and (max-width:$bp-495){
+       width: 45rem;;
+      }
+
+      @media only screen and (max-width:$bp-495){
+        width: 40rem;;
+       }
+
+       @media only screen and (max-width:$bp-575){
+        width: 35rem;
+       }
+    }
+
+    &__single-box:hover &__photo{
+        transform: scale(1.05);
+    }
+
+    &__transparent{
+        position: absolute;
+        background-color:rgba(rgb(23, 92, 124),.3);
+        top: 0;
+        right: 0;
+        width: 50%;
+        padding: 3rem 2.5rem 5rem 2.5rem;
+
+        @media only screen and (max-width:$bp-medium) {
+            width: 80%;
+          }
+
+        @media only screen and (max-width:$bp-smallest) {
+            width: 54%;
+          }
+        
+          @media only screen and (max-width:$bp-450) {
+            width: 80%;
+           
+          }
+          
+          
+    }
+
+    &__column{
+     display: flex;
+     font-size: 1.6rem;
+     color: var(--color-grey-light-3);
+     margin-bottom: 2rem;
+
+     &--rule{
+        border-right: solid 2px var(--color-grey-light-3);
+     }
+    }
+    
+  .flex1{
+   margin-right: 1rem;
+  }
+
+  span{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-yellow);
+    display: block;
+    margin-bottom: -1rem;
+  }
+
+  .flex2{
+    margin-left: 1rem;
+    margin-top:.4rem;
+   }
+
+   .icon{
+    margin-right: 1rem;
+   }
+
+   &__paragraph{
+    font-size: 1.5rem;
+    color:  var(--color-grey-light-3);
+    margin-bottom: 4rem;
+ 
+   }
+
+   &__transparent-link{
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--color-blue);
+      background-color: var(--color-yellow);
+      padding: 1.5rem 4.5rem;
+      text-transform: uppercase;
+
+      &:hover{
+        color: var(--color-yellow);
+        background-color: var(--color-blue);
+
+      }
+       
+    }
+
+
+    &__link{
+        font-size: 1.2rem;
+          color: var(--color-yellow);
+          text-decoration: none;
+          text-transform: uppercase;
+          text-align: center;
+          display: block;
+         margin-top: 8rem;
+
+         @media only screen and (max-width:$bp-medium) {
+            margin-top: 3rem;
+            padding: 2rem 0;
+          }
+    }
+  }

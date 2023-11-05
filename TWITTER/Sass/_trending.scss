@@ -1,0 +1,151 @@
+.trending{
+    flex: 1;
+    padding: 0 4rem 0 2rem;
+
+    @include respond(tabland){
+     // flex: 0 0 24%;
+    
+     }
+
+      @include respond(1004){
+        display: none;
+        flex: 0 0 10%;
+       }
+   
+
+    &__search{
+        background-color: #eff3f4;
+        margin-top: .6rem;
+        padding: .8rem 2rem;
+        width: 80%;
+        border-radius: 10rem;
+        display: flex;
+       
+        @include respond(1004){
+           width: 82%;
+         margin-bottom: 2rem;
+        
+         }
+
+       &--btn{
+          border: none;
+          font-size: 1.1rem;
+          color: #77858f;
+          background-color: transparent;
+          margin-left: -.5rem;
+       }
+
+       &--input{
+        border: none;
+        background-color:transparent;
+        margin-left: 1rem;
+        
+
+         &::-webkit-input-placeholder{
+           font-size: 1rem;
+            color: #77858f;
+         }
+
+         &:focus{
+            outline: none;
+            background-color: transparent;
+         }
+       }
+    }
+
+    &__main-box{
+        margin-top: 1rem;
+        background-color: #eff3f4;
+        padding-bottom: 2rem;
+        border-radius: 1rem;
+        width: 98%;
+
+        @include respond(tabland){
+            width: 18rem;
+          
+         
+          }
+
+    }
+
+    &__h3{
+        margin-bottom: .6rem;
+        padding:.5rem 1.2rem;
+    }
+
+
+    &__mini{
+       display: flex;
+       justify-content: space-between;
+       padding:.5rem 1.2rem;
+       margin-bottom: .2rem;
+
+        &:hover{
+            background-color: #ddd;
+        }
+       
+    
+       i{
+        color:#777 ;
+       } 
+    }
+
+    &__box{
+        
+    }
+
+    &__para{
+        color: #777;
+        font-size: .8rem;
+    }
+
+    &__para2{
+        color: #777;
+        font-size: .9rem;
+    }
+
+    .angle{
+        margin-right: .3rem;
+    }
+
+    &__h6{
+        font-size: 1rem;
+    }
+    
+} 
+
+.fixed{
+    background-color:#fff;
+    position: fixed;
+    bottom: 0;
+    right: 1.5rem;
+    width: 25rem;
+    height: 3.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &__message{
+        margin-right: auto;
+    }
+
+    i{
+        font-size: 1.3rem;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+        
+    }
+
+    @include respond(tabland){
+        width: 21.5rem;
+      }
+
+      @include respond(1095){
+       display: none;
+     }
+}
